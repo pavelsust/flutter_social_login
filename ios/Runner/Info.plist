@@ -53,5 +53,21 @@
             </array>
         </dict>
     </array>
+
+
+    <key>CFBundleURLTypes</key>
+    <array>
+    <dict>
+    <key>CFBundleURLSchemes</key>
+    <array>
+    <string>fb3420624064624594</string>
+    </array>
+    </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>3420624064624594</string>
+    <key>FacebookDisplayName</key>
+    <string>Flutter Social Login</string>
+
 </dict>
 </plist>
