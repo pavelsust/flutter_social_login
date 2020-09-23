@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
+import 'package:flutter_social_login/LoginScreen.dart';
 import 'package:flutter_social_login/MobileLogInScreen.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:http/http.dart' as http;
@@ -46,8 +47,7 @@ class _LoginPage extends State<LoginPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => MobileLoginScreen()),
+                      MaterialPageRoute(builder: (context) => MobileLoginScreen()),
                     );
                   }),
             ],
