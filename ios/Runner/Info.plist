@@ -18,8 +18,29 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb3420624064624594</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.858056593408-hnkinr7io861th17f8dc98k1kf7ojhcu</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>FacebookAppID</key>
+	<string>3420624064624594</string>
+	<key>FacebookDisplayName</key>
+	<string>Flutter Social Login</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -41,33 +62,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>com.googleusercontent.apps.858056593408-hnkinr7io861th17f8dc98k1kf7ojhcu</string>
-            </array>
-        </dict>
-    </array>
-
-
-    <key>CFBundleURLTypes</key>
-    <array>
-    <dict>
-    <key>CFBundleURLSchemes</key>
-    <array>
-    <string>fb3420624064624594</string>
-    </array>
-    </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>3420624064624594</string>
-    <key>FacebookDisplayName</key>
-    <string>Flutter Social Login</string>
-
 </dict>
 </plist>

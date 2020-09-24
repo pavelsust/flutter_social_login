@@ -92,6 +92,7 @@ class _OtpVerifyScreen extends State<OtpVerifyScreen> {
               child: PinInputTextField(
                 pinLength: 6,
                 decoration: _pinDecoration,
+                controller: _pinEditingController,
                 autoFocus: true,
                 textInputAction: TextInputAction.done,
                 onSubmit: (pin) {
@@ -201,6 +202,7 @@ class _OtpVerifyScreen extends State<OtpVerifyScreen> {
   void _onFormSubmitted() async {
     AuthCredential _authCredential = PhoneAuthProvider.credential(
         verificationId: _verificationId, smsCode: _pinEditingController.text);
+
     _firebaseAuth.signInWithCredential(_authCredential).then((value) {
       if (value.user != null) {
         debugPrint("${value.user.phoneNumber}");
@@ -208,9 +210,38 @@ class _OtpVerifyScreen extends State<OtpVerifyScreen> {
         showToast("Otp verify success", Colors.green);
       } else {
         showToast("Otp verification error ", Colors.red);
-      }
+      } v
     }).catchError((error) {
       showToast("Someting went wrong", Colors.red);
     });
   }
+
+
+  // void _onFormSubmitted() async {
+  //   AuthCredential _authCredential = PhoneAuthProvider.credential(
+  //       verificationId: _verificationId, smsCode: _pinEditingController.text);
+  //
+  //   debugPrint("phone auth ${_verificationId} , sms code ${_pinEditingController.text.toString()}");
+  //
+  //   _firebaseAuth
+  //       .signInWithCredential(_authCredential)
+  //       .then((value) {
+  //     if (value.user != null) {
+  //
+  //       print(value.user.phoneNumber);
+  //       // Navigator.pushAndRemoveUntil(
+  //       //     context,
+  //       //     MaterialPageRoute(
+  //       //       builder: (context) => HomePage(
+  //       //         user: value.user,
+  //       //       ),
+  //       //     ),
+  //       //         (Route<dynamic> route) => false);
+  //     } else {
+  //       showToast("Error validating OTP, try again", Colors.red);
+  //     }
+  //   }).catchError((error) {
+  //     showToast("Something went wrong", Colors.red);
+  //   });
+  // }
 }
